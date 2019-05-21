@@ -31,12 +31,22 @@ request.onload = function(){
             para1.style.textAlign= 'center';
 
             var cphrase = document.createElement('p');
-            cphrase.textContent = users.catchPhrase;
+            cphrase.textContent = users.company.catchPhrase;
+            cphrase.style.textAlign = 'center';
+
+
+            var address = document.createElement('p');
+            address.textContent = users.address.geo.lat + ' ' + users.address.geo.lng;
+            address.style.textAlign = 'center';
+
+        
 
 
             container.appendChild(card);
             card.appendChild(header1);
             card.appendChild(para1);    
+            card.appendChild(cphrase);
+            card.appendChild(address);
 
         });
     }else {
